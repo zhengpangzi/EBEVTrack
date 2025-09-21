@@ -84,7 +84,7 @@ pip3 install -r requirements.txt
 
 ## Data preparation📁
 
-Download [MOT17](https://motchallenge.net/), [MOT20](https://motchallenge.net/), and put them under <EBEVTrack_HOME>/datasets in the following structure:
+1. Download [MOT17](https://motchallenge.net/), [MOT20](https://motchallenge.net/), [CrowdHuman](https://www.crowdhuman.org/), [Cityperson](https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md), [ETHZ](https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md), [DanceTrack](https://github.com/DanceTrack/DanceTrack), [CUHKSYSU](http://www.ee.cuhk.edu.hk/~xgwang/PS/dataset.html) and put them under <EBEVTRACK_HOME>/datasets in the following structure.
 
 ```text
 📁datasets
