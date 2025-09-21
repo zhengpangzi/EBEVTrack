@@ -3,15 +3,14 @@
 
 #### EBEVTrack is a simple and strong multi-object tracker.💪
 
-> [**EBEVTrack: Estimated Bird's-Eye View for Multi-Object Tracking**](https://arxiv.org/abs/2110.06864)
->
+> **EBEVTrack: Estimated Bird's-Eye View for Multi-Object Tracking**
 
 ## Abstract📘
 
 Multi-object tracking (MOT) is a fundamental task in computer vision that requires accurately detecting and continuously tracking multiple targets across video frames. However, existing methods struggle with objects that have similar appearances or are occluded. Bird’s-Eye View (BEV) can reduce perspective distortion and provide spatial consistency, but traditional implementations usually rely on complex 3D perception or multi-camera systems. To address these limitations, we propose EBEVTrack, a novel online tracker that estimates BEV from monocular 2D images. Specifically, we design two key strategies: BEV-based Data Association (BDA), which links targets using their spatial relationships in the BEV coordinate system, and Occluded Target Search (OTS), which reduces false trajectories and identity switches by handling occluded targets. Extensive experiments on MOT17 and MOT20 demonstrate that EBEVTrack achieves superior robustness and accuracy. The source code and data are available at: https://github.com/zhengpangzi/EBEVTrack.
 <p align="center"><img src="assets/abstract.jpg" width="400"/></p>
 
-### Highlights
+### Highlights💡
 
 - We propose **EBEVTrack**, a novel multi-object tracking framework that integrates **Estimated Bird’s-Eye View (EBEV)** into data association.
 - We design a **BEV-based Data Association (BDA)** strategy that exploits spatial geometric consistency in BEV space to improve trajectory matching.
@@ -22,7 +21,7 @@ Multi-object tracking (MOT) is a fundamental task in computer vision that requir
 
 <p align="center"><img src="assets/pipeline.jpg" width="800"/></p>
 
-## Tracking performance
+## Tracking performance📈
 
 ### Results on MOT17 challenge test set
 
@@ -51,17 +50,30 @@ pip3 install -r requirements.txt
 python3 setup.py develop
 ```
 
-Step2.  BEV Estimation
+Step2. Install [pycocotools](https://github.com/cocodataset/cocoapi).
+
+```shell
+pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+```
+
+Step3. Others
+
+```shell
+pip install cython_bbox pandas xmltodict
+```
+
+
+<!-- Step2.  BEV Estimation
 
 ```shell
 
-```
+``` -->
 
-Step3. BEV-based Data Association (BDA) Installation
+<!-- Step3. BEV-based Data Association (BDA) Installation
 
 ```shell
 
-```
+``` -->
 
 Step4. Occluded Target Search (OTS)
 
@@ -69,7 +81,7 @@ Step4. Occluded Target Search (OTS)
 
 ```
 
-## Data preparation
+## Data preparation📁
 
 Download [MOT17](https://motchallenge.net/), [MOT20](https://motchallenge.net/), and put them under <EBEVTrack_HOME>/datasets in the following structure:
 
