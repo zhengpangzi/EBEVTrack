@@ -17,7 +17,7 @@ Multi-object tracking (MOT) is a fundamental task in computer vision that requir
 - We introduce an **Occluded Target Search (OTS)** strategy that predicts and searches for occluded targets in BEV space, reducing false trajectories and ID switches.
 - Experiments on MOT17 and MOT20 verify the **effectiveness** and **generalization** of the proposed approach.
 
-### Pipeline
+### Pipeline✔️
 
 <p align="center"><img src="assets/pipeline.jpg" width="800"/></p>
 
@@ -39,7 +39,7 @@ Multi-object tracking (MOT) is a fundamental task in computer vision that requir
 
 ### Visualization results on MOT challenge test set
 
-## Installation
+## Installation✅
 
 Step1. Install EBEVTrack.
 
@@ -75,10 +75,11 @@ pip install cython_bbox pandas xmltodict
 
 ``` -->
 
-Step4. Occluded Target Search (OTS)
+Step4. Install Occluded Target Search (OTS)
 
 ```shell
-
+cd EBEVTrack/ots
+pip3 install -r requirements.txt
 ```
 
 ## Data preparation📁
@@ -88,17 +89,44 @@ Download [MOT17](https://motchallenge.net/), [MOT20](https://motchallenge.net/),
 ```text
 📁datasets
    ├─📁mot
-   |    ├─📁train
-   |    └─📁test   
-   |  
-   └─📁MOT20
-        ├─📁train
-        └─📁test  
+   │   ├─📁train
+   │   └─📁test
+   │
+   ├─📁crowdhuman
+   │   ├─📁Crowdhuman_train
+   │   ├─📁Crowdhuman_val
+   │   ├─📄annotation_train.odgt
+   │   └─📄annotation_val.odgt
+   │
+   ├─📁MOT20
+   │   ├─📁train
+   │   └─📁test
+   │
+   ├─📁Cityscapes
+   │   ├─📁images
+   │   └─📁labels_with_ids
+   │
+   ├─📁ETHZ
+   │   ├─📁eth01
+   │   ├─📁...
+   │   └─📁eth07
+   │
+   ├─📁CUHKSYSU
+   │   ├─📁images
+   │   └─📁labels_with_ids
+   │
+   └─📁dancetrack
+       ├─📁train
+       │   └─📄train_seqmap.txt
+       ├─📁val
+       │   └─📄val_seqmap.txt
+       └─📁test
+           └─📄test_seqmap.txt        
 ```
 
 For a fairer comparison, the detection model is kept consistent with the baseline algorithm.
 
-## Model zoo
+## Model zoo 🐦︎
 
 Download and store the trained models in 'pretrained' folder as follow:
 
@@ -126,7 +154,7 @@ Download and store the trained models in 'pretrained' folder as follow:
 |------------|-|
 |EBEVTrack_mot20|[[google]](https://drive.google.com/file/d/1HX2_JpMOjOIj1Z9rJjoet9XNy_cCAs5U/view?usp=sharing), [[baidu(code:3apd)]](https://pan.baidu.com/s/1bowJJj0bAnbhEQ3_6_Am0A) &nbsp;
 
-## Training
+## Training🚀
 
 ### Train the Detection Model
 
@@ -167,7 +195,7 @@ Download the COCO-pretrained YOLOX weight [here](https://github.com/Megvii-BaseD
   ```shell
   python3 tools/train.py -f exps/example/mot/your_exp_file.py -d 8 -b 48 --fp16 -o -c pretrained/yolox_x.pth
   ```
-## Tracking
+## Tracking🎯
 
 * **Evaluation on MOT17 half val**
   
@@ -203,11 +231,11 @@ cd <EBEVTrack_HOME>
 python3 tools/demo_track.py video -f exps/example/mot/yolox_x_mix_det.py -c pretrained/ebevtrack_x_mot17.pth.tar --fp16 --fuse --save_result
 ```
 
-## Acknowledgement
+## Acknowledgement🤝
 
 A large part of the code is borrowed from [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX), [ByteTrack](https://github.com/ifzhang/ByteTrack), [BoT-SORT](https://github.com/NirAharon/BOT-SORT) and [FastReID](https://github.com/JDAI-CV/fast-reid). Many thanks for their wonderful works.
 
-## Citation
+## Citation🤗
 
 If you find our work useful for your research, please consider citing:
 
