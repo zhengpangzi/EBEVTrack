@@ -17,7 +17,7 @@ Multi-object tracking (MOT) is a fundamental task in computer vision that requir
 - We introduce an **Occluded Target Search (OTS)** strategy that predicts and searches for occluded targets in BEV space, reducing false trajectories and ID switches.
 - Experiments on MOT17 and MOT20 verify the **effectiveness** and **generalization** of the proposed approach.
 
-### Pipeline✔️
+###  Pipeline of EBEVTrack✔️
 
 <p align="center"><img src="assets/pipeline.jpg" width="800"/></p>
 
